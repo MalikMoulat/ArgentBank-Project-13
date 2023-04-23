@@ -8,7 +8,7 @@ import UserHeader from "../../components/UserHeader/userheader"
 import Account from "../../components/Account/account"
 import { fetchData } from '../../actions/actions'
 
-import { getTokenUser } from "../../feature/reducer"
+import { getTokenUser } from "../../Feature/reducer"
 
 function UserPage() {
 

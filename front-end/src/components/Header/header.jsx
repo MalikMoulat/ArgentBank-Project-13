@@ -4,7 +4,7 @@ import logo from '../../assets/img/argentBankLogo.png'
 
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { resetState } from '../../feature/reducer'
+import { resetState } from '../../Feature/reducer'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { string } from 'prop-types'

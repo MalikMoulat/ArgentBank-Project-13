@@ -3,7 +3,7 @@ import { useState } from "react"
 import axios from "axios"
 
 
-import { updateUserName } from "../../feature/reducer"
+import { updateUserName } from "../../Feature/reducer"
 
 import React from "react"
 import './userheader.css'
