@@ -1,7 +1,6 @@
 import axios from "axios"
 import { getTokenUser, getUserData } from "../Feature/reducer"
 
-
 /**
  * La fonction fetchToken reucpère et stock le token quand l'utilisateur se connecte
  * et stocke le token dans le localStorage et dans le state redux
@@ -54,9 +53,10 @@ export const fetchToken = async ( userLogin, dispatch, navigate ) => {
  * @async
  * @param {string} token - token de l'utilisateur
  * @param {function} dispatch - useDispath()
+ * @param {function} navigate - unseNavigate()
  * @returns {promise}
  */
-export const fetchData = async ( token, dispatch ) => {
+export const fetchData = async ( token, dispatch, navigate ) => {
 
     return axios({
         method: 'post',
@@ -67,5 +67,5 @@ export const fetchData = async ( token, dispatch ) => {
     }).then(result => {
             dispatch(getUserData(result.data.body))
         }
-    ).catch(error => { console.error(error); return Promise.reject(error); })
+    ).catch(error => { console.error(error); navigate('/login'); return Promise.reject(error); })
 }

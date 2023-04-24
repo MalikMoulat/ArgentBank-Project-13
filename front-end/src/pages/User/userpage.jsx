@@ -2,8 +2,6 @@ import React, { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import './userpage.css'
-import Header from "../../components/Header/header"
-import Footer from "../../components/Footer/footer"
 import UserHeader from "../../components/UserHeader/userheader"
 import Account from "../../components/Account/account"
 import { fetchData } from '../../actions/actions'
@@ -16,18 +14,13 @@ function UserPage() {
     const dispatch = useDispatch()
     const tokenStorage = window.localStorage.getItem('TOKEN')
 
-    if (tokenStorage === null){
-        navigate('/login')
-    }
-
     useEffect(() => {
-        fetchData(tokenStorage, dispatch)
+        fetchData(tokenStorage, dispatch, navigate)
         dispatch(getTokenUser(tokenStorage))
     }, [])
 
     return(
         <React.Fragment>
-            <Header />
             <main className="main bg-dark account-item-wrap">
                 <UserHeader />
                 <h2 className="sr-only">Accounts</h2>
@@ -47,7 +40,6 @@ function UserPage() {
                     accountDescription="Current Balance"
                 />
             </main>
-            <Footer />
         </React.Fragment>
     )
 }

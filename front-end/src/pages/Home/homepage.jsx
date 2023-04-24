@@ -1,10 +1,8 @@
 import React from 'react'
 import './homepage.css'
 
-import Header from '../../components/Header/header'
 import Banner from '../../components/Banner/banner'
 import FeatureItem from '../../components/FeatureItem/featureItem'
-import Footer from '../../components/Footer/footer'
 
 import chatIcon from '../../assets/img/icon-chat.png'
 import moneyIcon from '../../assets/img/icon-money.png'
@@ -13,7 +11,6 @@ import securityIcon from '../../assets/img/icon-security.png'
 function HomePage(){
     return(
         <React.Fragment>
-            <Header />
             <main>
                 <Banner />
                 <section className='features'>
@@ -39,7 +36,6 @@ function HomePage(){
                     />
                 </section>
             </main>
-            <Footer />
         </React.Fragment>
 
     )

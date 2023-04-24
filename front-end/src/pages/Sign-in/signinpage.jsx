@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { fetchToken } from '../../actions/actions'
 import './signinpage.css'
-import Header from '../../components/Header/header'
-import Footer from '../../components/Footer/footer'
 
 function SignInPage() {
   const dispatch = useDispatch()
@@ -25,7 +23,6 @@ function SignInPage() {
 
   return (
     <React.Fragment>
-        <Header />
         <main className="main bg-dark wrap-sign-form">
             <section className="sign-in-content">
             <i className="fa fa-user-circle sign-in-icon"></i>
@@ -60,7 +57,6 @@ function SignInPage() {
             </form>
             </section>
         </main>
-        <Footer />
     </React.Fragment>
   )
 }

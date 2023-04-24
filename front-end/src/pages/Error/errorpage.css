@@ -1,0 +1,15 @@
+.error_container{
+    padding: 50px;
+    height: 68%;
+}
+
+.error_container h1 {
+    font-size: 200px;
+    color: rgb(52, 221, 165);
+}
+
+@media (max-width: 720px) {
+    .error_container h1 {
+      font-size: 50px;
+    }
+  }
